@@ -1,0 +1,105 @@
+
+#contenedor{
+    display: flex;
+}
+
+section{
+    width: 100%;  
+   
+}
+
+#menu{   
+    margin-right: 80px; 
+}
+aside{
+    width: 20%;    
+    text-align: center;
+    margin-left: 30px; 
+   
+}
+
+article img{
+    width: 60%;
+   
+}
+
+p1{
+    color:  #18215d;
+    font-size: 12px;
+}
+
+p{
+    color:  #18215d;
+    font-size: 14px;
+
+}
+
+/* float: left;
+html{
+    border: 2px solid red
+}
+body{
+    border: 2px solid yellow
+}
+#contenedor{
+    width: 95%;
+    margin: auto;  
+}
+.logo{
+    margin: 10px 0px;
+
+}
+.banner{
+    width: 100%;
+
+}
+main{
+display: flex;
+}
+aside{
+    width: 20%;
+}
+aside a{
+    margin: 10px;
+    display: block;
+
+}
+section{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+article{
+    margin: 10px;
+}
+
+article img{
+    margin: 0px 20px 10px 0px;
+    width: 25%;
+    float: left;
+}
+
+article p{
+    text-align: justify;
+}
+
+footer {
+    background-color: gray;
+    display: flex;
+}
+
+footer p{
+    width: 90%;
+    margin: 30px 20px 30px 20px;
+    color: white;
+}
+
+footer div{
+    margin: 10px;
+    display: flex;
+}
+
+footer div img{
+    padding: 10px;
+}
+

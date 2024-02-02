@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Cibertec HIB</title>
+    <link href="../css/estilos_gestion.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="contenedor">
+      <aside>
+			<article>
+				<img src="/imagenes/logo.jpg" alt="" />
+				<p>
+					<strong>Menu de Gestion</strong>
+				</p>
+			</article>
+			<nav id="menu">
+				<ul>
+					<br>
+					<ul><a th:href="@{listar_Ctrl_Reposicion}">Gestion de Reposiciones</a></ul>
+					<br>
+					<ul><a th:href="@{comprasProductos}">Compras</a></ul>
+					<ul><a th:href="@{ventaProductos}">Ventas</a></ul>
+					<br>
+					<ul><a th:href="@{crud_Clientes}">Clientes</a></ul>
+					<ul><a th:href="@{crud_Proveedores}">Proveedores</a></ul>
+					<ul><a th:href="@{crud_Productos}">Productos</a></ul>
+					<br>
+					<br>
+					<ul><a th:href="@{autentificar}">Cerrar sesión</a></ul>
+				</ul>
+			</nav>
+			<br />
+				<p1>Desarrollado por Cibertec</p1>
+			<br /> 
+				<a href="">@copyright 2023</a>
+		</aside>
+      <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<h3>Nuevo Producto</h3>
+				</div>
+			</nav>
+       
+       <div class="card">
+		<div class="card-body">
+			<form th:action="@{/crud_ejecutar_crear_producto}" th:object="${PaqueteP}" method="post">
+				<div>
+					<label class="form-label"> Tipo Producto </label>
+					<select class="form-control" th:field="*{tipo}">
+						<option th:each="option2 : ${paquetetp}" th:value="${option2.idtipo}" th:text="${option2.descripcion}"></option>
+						
+					</select>					
+				</div>
+					<div>
+					<label class="form-label"> Proveedor </label> 
+					<select class="form-control" th:field="*{proveedor}">
+						<option th:each="option : ${PaquetePv}" th:value="${option.idproveedor}" th:text="${option.razonsocial}"></option>
+					</select>
+				</div>
+				<div>
+					<label class="form-label">Nombre del Producto</label>
+					<input type="text"  class="form-control" id="name" th:field="*{descripcion}">
+				</div>
+				<div>
+					<label class="form-label">precio</label>
+					<input type="number" step="0.01" class="form-control" th:field="*{precio}">
+				</div>
+				<div>
+					<label class="form-label">Stock Minimo</label>
+					<input type="number" class="form-control" th:field="*{stock_min}">
+				</div>
+				<div>
+					<label class="form-label">Stock Maximo</label>
+					<input type="number" class="form-control" th:field="*{stock_max}">
+				</div>
+				<input type="submit" class="btn btn-primary mt-2" value="Crear Producto">
+			</form>
+		</div>
+	</div>
+       
+       
+       
+    </section>
+      
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>

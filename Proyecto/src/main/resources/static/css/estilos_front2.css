@@ -1,0 +1,49 @@
+
+* {
+	margin: 0;
+	border: 0;
+    padding: 0;
+}
+
+div{
+    width: 100%;
+   
+}
+section {
+	width: 100%;
+	padding: 5px;
+	display: flex;
+  	margin-left: 100px;
+    flex-direction: row;
+
+	justify-content: space-around;
+	   
+}
+
+section figure {
+	width: 25%;
+
+}
+
+section figure img {
+	width: 40%;
+	/*margin: 10px auto;*/
+	display: block;
+	text-align: center;
+}
+
+section figure a {
+	margin: 10px;
+	text-align: center;
+}
+footer {
+	padding: 10px;
+	text-align: center;
+	background-color:  #18215d;
+}
+
+footer a {	
+	color: white;
+	
+	
+}
