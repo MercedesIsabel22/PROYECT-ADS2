@@ -5454,3 +5454,27 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.3.1.Final.jar:6.3.1.Final]
 	... 36 common frames omitted
 
+2024-02-03T18:26:07.844-05:00  INFO 23360 --- [restartedMain] e.cibertec.proyecto.ProyectoApplication  : Starting ProyectoApplication using Java 17.0.10 with PID 23360 (D:\Documents\DocsWS\WS_Java\PROYECT-ADS2\Proyecto\target\classes started by Hector in D:\Documents\DocsWS\WS_Java\PROYECT-ADS2\Proyecto)
+2024-02-03T18:26:07.848-05:00  INFO 23360 --- [restartedMain] e.cibertec.proyecto.ProyectoApplication  : The following 1 profile is active: "dev"
+2024-02-03T18:26:07.941-05:00  INFO 23360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-03T18:26:07.941-05:00  INFO 23360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-03T18:26:09.495-05:00  INFO 23360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-03T18:26:09.658-05:00  INFO 23360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 8 JPA repository interfaces.
+2024-02-03T18:26:11.301-05:00  INFO 23360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-02-03T18:26:11.322-05:00  INFO 23360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-03T18:26:11.323-05:00  INFO 23360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-03T18:26:11.474-05:00  INFO 23360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-03T18:26:11.475-05:00  INFO 23360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3533 ms
+2024-02-03T18:26:11.769-05:00  INFO 23360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-03T18:26:12.508-05:00  INFO 23360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@791320b1
+2024-02-03T18:26:12.512-05:00  INFO 23360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-03T18:26:12.590-05:00  INFO 23360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-03T18:26:12.804-05:00  INFO 23360 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-03T18:26:12.954-05:00  INFO 23360 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-03T18:26:13.585-05:00  INFO 23360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-03T18:26:15.560-05:00  INFO 23360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-03T18:26:15.566-05:00  INFO 23360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-03T18:26:16.769-05:00  WARN 23360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-03T18:26:17.687-05:00  INFO 23360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-03T18:26:17.765-05:00  INFO 23360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2024-02-03T18:26:17.777-05:00  INFO 23360 --- [restartedMain] e.cibertec.proyecto.ProyectoApplication  : Started ProyectoApplication in 10.811 seconds (process running for 14.776)
