@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.cibertec.proyecto.entity.CapsulaCliente;
 
-public interface ClientesService {
+public interface IClientesService {
 	
 	public List<CapsulaCliente> listar();
 	public CapsulaCliente buscarCliente(Long codigo);

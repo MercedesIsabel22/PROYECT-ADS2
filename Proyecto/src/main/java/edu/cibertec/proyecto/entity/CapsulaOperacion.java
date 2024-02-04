@@ -1,5 +1,7 @@
 package edu.cibertec.proyecto.entity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -9,14 +11,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Builder
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_operaciones")
-public class CapsulaOperacion {
+public class CapsulaOperacion implements Serializable {
+	@Serial
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long operaciones;

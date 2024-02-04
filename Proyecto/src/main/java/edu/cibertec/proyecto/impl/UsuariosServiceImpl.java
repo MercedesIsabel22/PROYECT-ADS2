@@ -3,12 +3,12 @@ package edu.cibertec.proyecto.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.cibertec.proyecto.repositories.UsuariosRepository;
-import edu.cibertec.proyecto.services.UsuariosService;
+import edu.cibertec.proyecto.repositories.IUsuariosRepository;
+import edu.cibertec.proyecto.services.IUsuariosService;
 @Service
-public class UsuariosServiceImpl implements UsuariosService {
+public class UsuariosServiceImpl implements IUsuariosService {
 	@Autowired
-	UsuariosRepository ru;
+	IUsuariosRepository ru;
 	
 	@Override
 	public boolean validarLogin(String User, String Password) {

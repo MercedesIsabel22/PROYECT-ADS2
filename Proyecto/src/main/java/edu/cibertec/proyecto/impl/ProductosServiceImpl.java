@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
-import edu.cibertec.proyecto.repositories.ProductosRepository;
-import edu.cibertec.proyecto.services.ProductosService;
+import edu.cibertec.proyecto.repositories.IProductosRepository;
+import edu.cibertec.proyecto.services.IProductosService;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -21,9 +21,9 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 @Service
-public class ProductosServiceImpl implements ProductosService {
+public class ProductosServiceImpl implements IProductosService {
 	@Autowired
-    ProductosRepository repository;
+	IProductosRepository repository;
 	
 	@Override
 	public List<CapsulaProducto> listar() {

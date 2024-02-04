@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.cibertec.proyecto.entity.CapsulaTipoProducto;
-import edu.cibertec.proyecto.repositories.TipoProductosRepository;
-import edu.cibertec.proyecto.services.TipoProductosService;
+import edu.cibertec.proyecto.repositories.ITipoProductosRepository;
+import edu.cibertec.proyecto.services.ITipoProductosService;
 
 @Service
-public class TipoProductosServiceImpl implements TipoProductosService {
+public class TipoProductosServiceImpl implements ITipoProductosService {
 	@Autowired
-	TipoProductosRepository rt;
+	ITipoProductosRepository rt;
 	
 	@Override
 	public List<CapsulaTipoProducto> listar() {

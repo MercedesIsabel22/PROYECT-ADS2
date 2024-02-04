@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.cibertec.proyecto.entity.CapsulaOperacion;
 
-public interface OperacionesService {
+public interface IOperacionesService {
 
 	public void crearOperaciones(CapsulaOperacion obj);
 	public void crearMultiplesOperaciones(List<CapsulaOperacion> obj);

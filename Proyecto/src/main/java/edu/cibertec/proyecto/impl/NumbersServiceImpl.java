@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.cibertec.proyecto.entity.CapsulaNumber;
-import edu.cibertec.proyecto.repositories.NumbersRepository;
-import edu.cibertec.proyecto.services.NumbersService;
+import edu.cibertec.proyecto.repositories.INumbersRepository;
+import edu.cibertec.proyecto.services.INumbersService;
 
 @Service
-public class NumbersServiceImpl implements NumbersService {
+public class NumbersServiceImpl implements INumbersService {
     @Autowired
-    NumbersRepository rn;
+    INumbersRepository rn;
 
     @Override
     public CapsulaNumber buscarNumeracion(Long id) {

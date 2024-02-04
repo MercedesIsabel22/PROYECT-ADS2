@@ -1,6 +1,6 @@
 package edu.cibertec.proyecto.services;
 
-public interface UsuariosService {
+public interface IUsuariosService {
 
 	public boolean validarLogin (String User,String Password);
 		

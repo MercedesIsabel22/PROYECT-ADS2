@@ -13,32 +13,35 @@ import org.springframework.web.servlet.ModelAndView;
 
 import edu.cibertec.proyecto.entity.CapsulaCliente;
 import edu.cibertec.proyecto.entity.CapsulaProveedor;
-import edu.cibertec.proyecto.services.ClientesService;
-import edu.cibertec.proyecto.services.NumbersService;
-import edu.cibertec.proyecto.services.ProductosService;
-import edu.cibertec.proyecto.services.ProveedoresService;
-import edu.cibertec.proyecto.services.TipoProductosService;
+import edu.cibertec.proyecto.services.IClientesService;
+import edu.cibertec.proyecto.services.INumbersService;
+import edu.cibertec.proyecto.services.IProductosService;
+import edu.cibertec.proyecto.services.IProveedoresService;
+import edu.cibertec.proyecto.services.ITipoProductosService;
 import jakarta.validation.Valid;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
 public class DirectorCrudsController {
     @Autowired
-    private ProductosService SProducto;
+    private IProductosService SProducto;
     @Autowired
-    private TipoProductosService STipo;
+    private ITipoProductosService STipo;
     @Autowired
-    private ProveedoresService SProveedor;
+    private IProveedoresService SProveedor;
     @Autowired
-    private NumbersService SNumber;
+    private INumbersService SNumber;
     @Autowired
-    private ClientesService SCliente;
+    private IClientesService SCliente;
 
 
     @GetMapping("crud_Productos")
     public ModelAndView crudListProductos() {
         ModelAndView mav = new ModelAndView("crudProductos");
-        mav.addObject("paqueteP", SProducto.listar());
+        final List<CapsulaProducto> productos = SProducto.listar();
+        mav.addObject("paqueteP", productos);
         return mav;
     }
 

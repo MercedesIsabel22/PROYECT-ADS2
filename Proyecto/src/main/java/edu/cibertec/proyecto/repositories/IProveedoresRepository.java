@@ -8,9 +8,7 @@ import edu.cibertec.proyecto.entity.CapsulaProveedor;
 import java.util.List;
 
 @Repository
-public interface ProveedoresRepository extends JpaRepository<CapsulaProveedor, Long> {
-
-
+public interface IProveedoresRepository extends JpaRepository<CapsulaProveedor, Long> {
     List<CapsulaProveedor> findByEstado(int estado);
 
 }

@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.cibertec.proyecto.entity.CapsulaProducto;
-import edu.cibertec.proyecto.services.ClientesService;
-import edu.cibertec.proyecto.services.NumbersService;
-import edu.cibertec.proyecto.services.OperacionesService;
-import edu.cibertec.proyecto.services.ProductosService;
-import edu.cibertec.proyecto.services.VentsService;
+import edu.cibertec.proyecto.services.IClientesService;
+import edu.cibertec.proyecto.services.INumbersService;
+import edu.cibertec.proyecto.services.IOperacionesService;
+import edu.cibertec.proyecto.services.IProductosService;
+import edu.cibertec.proyecto.services.IVentsService;
 
 @Controller
 @RequestMapping("/")
@@ -27,15 +27,15 @@ public class DirectorVentasController {
     List<PastillaProducto> pastilla = new ArrayList<PastillaProducto>();
 
     @Autowired
-    private ProductosService SProducto;
+    private IProductosService SProducto;
     @Autowired
-    private OperacionesService SOperacion;
+    private IOperacionesService SOperacion;
     @Autowired
-    private ClientesService SCliente;
+    private IClientesService SCliente;
     @Autowired
-    private VentsService SVenta;
+    private IVentsService SVenta;
     @Autowired
-    private NumbersService SNumber;
+    private INumbersService SNumber;
 
 
     @GetMapping("ventaProductos")

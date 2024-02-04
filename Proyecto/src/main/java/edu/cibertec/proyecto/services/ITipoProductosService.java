@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.cibertec.proyecto.entity.CapsulaTipoProducto;
 
-public interface TipoProductosService {
+public interface ITipoProductosService {
 
 	public List<CapsulaTipoProducto> listar();
 	

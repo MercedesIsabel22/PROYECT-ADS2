@@ -8,7 +8,6 @@ import edu.cibertec.proyecto.entity.CapsulaCliente;
 import java.util.List;
 
 @Repository
-public interface ClientesRepository extends JpaRepository<CapsulaCliente, Long> {
-
+public interface IClientesRepository extends JpaRepository<CapsulaCliente, Long> {
     List<CapsulaCliente> findByEstado(int estado);
 }

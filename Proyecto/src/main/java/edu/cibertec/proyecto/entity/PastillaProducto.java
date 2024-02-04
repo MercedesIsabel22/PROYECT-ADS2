@@ -1,15 +1,20 @@
 package edu.cibertec.proyecto.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
+
+import java.io.Serial;
+import java.io.Serializable;
 
 @Builder
-@Data
-public class PastillaProducto {
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+public class PastillaProducto implements Serializable {
+	@Serial
+	private static final long serialVersionUID = 1L;
+
 	private Long idProducto;
 	private String name;
 	private String idCliente;

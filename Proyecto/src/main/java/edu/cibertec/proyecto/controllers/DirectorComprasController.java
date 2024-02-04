@@ -18,10 +18,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import edu.cibertec.proyecto.entity.CapsulaOperacion;
 import edu.cibertec.proyecto.entity.PastillaProducto;
-import edu.cibertec.proyecto.services.NumbersService;
-import edu.cibertec.proyecto.services.OperacionesService;
-import edu.cibertec.proyecto.services.ProductosService;
-import edu.cibertec.proyecto.services.ProveedoresService;
+import edu.cibertec.proyecto.services.INumbersService;
+import edu.cibertec.proyecto.services.IOperacionesService;
+import edu.cibertec.proyecto.services.IProductosService;
+import edu.cibertec.proyecto.services.IProveedoresService;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.JRException;
@@ -33,13 +33,13 @@ public class DirectorComprasController {
     List<PastillaProducto> pastilla = new ArrayList<PastillaProducto>();
 
     @Autowired
-    private ProductosService SProducto;
+    private IProductosService SProducto;
     @Autowired
-    private OperacionesService SOperacion;
+    private IOperacionesService SOperacion;
     @Autowired
-    private ProveedoresService SProveedor;
+    private IProveedoresService SProveedor;
     @Autowired
-    private NumbersService SNumber;
+    private INumbersService SNumber;
 
 
     @GetMapping("listar_Ctrl_Reposicion")

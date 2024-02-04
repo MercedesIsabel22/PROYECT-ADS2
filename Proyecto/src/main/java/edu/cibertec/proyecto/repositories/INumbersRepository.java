@@ -3,8 +3,9 @@ package edu.cibertec.proyecto.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import edu.cibertec.proyecto.entity.CapsulaVenta;
+import edu.cibertec.proyecto.entity.CapsulaNumber;
+
 @Repository
-public interface VentasRepository extends JpaRepository<CapsulaVenta, String>{
+public interface INumbersRepository extends JpaRepository<CapsulaNumber, Long> {
 
 }

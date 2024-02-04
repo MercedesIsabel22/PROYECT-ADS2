@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.cibertec.proyecto.entity.CapsulaOperacion;
-import edu.cibertec.proyecto.repositories.OperacionesRepository;
-import edu.cibertec.proyecto.services.OperacionesService;
+import edu.cibertec.proyecto.repositories.IOperacionesRepository;
+import edu.cibertec.proyecto.services.IOperacionesService;
 
 @Service
-public class OperacionesServiceImpl implements OperacionesService {
+public class OperacionesServiceImpl implements IOperacionesService {
 	@Autowired
-	OperacionesRepository ro;
+	IOperacionesRepository ro;
 	
 	@Override
 	public void crearOperaciones(CapsulaOperacion obj) {

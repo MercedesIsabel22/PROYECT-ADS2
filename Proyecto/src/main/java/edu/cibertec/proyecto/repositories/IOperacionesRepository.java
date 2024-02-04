@@ -9,8 +9,7 @@ import edu.cibertec.proyecto.entity.CapsulaOperacion;
 import java.util.List;
 
 @Repository
-public interface OperacionesRepository extends JpaRepository<CapsulaOperacion, Long> {
-
+public interface IOperacionesRepository extends JpaRepository<CapsulaOperacion, Long> {
     List<CapsulaOperacion> findByProducto(CapsulaProducto producto);
 
 }

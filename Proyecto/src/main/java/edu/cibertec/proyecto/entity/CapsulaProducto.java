@@ -1,5 +1,6 @@
 package edu.cibertec.proyecto.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -9,10 +10,12 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_productos")
 public class CapsulaProducto implements Serializable {
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -44,12 +47,14 @@ public class CapsulaProducto implements Serializable {
 	
 	public boolean getReponer() {
 		int stk = getStock();
-		boolean men = false;
-		if (stk < getStock_min()) {
-			men = true;
-		}else {
-			men = false;
-		}
-		return men;
+		return stk < getStock_min();
+	}
+
+	public String getNameTipoproducto() {
+		return getTipo().getDescripcion();
+	}
+
+	public String getNameproveedor() {
+		return proveedor.getRazonsocial();
 	}
 }

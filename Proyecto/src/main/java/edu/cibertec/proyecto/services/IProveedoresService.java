@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.cibertec.proyecto.entity.CapsulaProveedor;
 
-public interface ProveedoresService {
+public interface IProveedoresService {
 
 	public List<CapsulaProveedor> listar();
 	public CapsulaProveedor buscarProveedor(Long codigo);

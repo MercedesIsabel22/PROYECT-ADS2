@@ -7,8 +7,6 @@ import edu.cibertec.proyecto.entity.CapsulaUsuario;
 import java.util.List;
 
 
-public interface UsuariosRepository extends JpaRepository<CapsulaUsuario, Long> {
-
-
+public interface IUsuariosRepository extends JpaRepository<CapsulaUsuario, Long> {
     List<CapsulaUsuario> findByUsuarioAndClave(String usuario, String clave);
 }

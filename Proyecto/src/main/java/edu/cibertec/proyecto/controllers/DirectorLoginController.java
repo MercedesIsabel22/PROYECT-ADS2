@@ -11,13 +11,13 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import edu.cibertec.proyecto.entity.CapsulaUsuario;
-import edu.cibertec.proyecto.services.UsuariosService;
+import edu.cibertec.proyecto.services.IUsuariosService;
 
 @Controller
 @RequestMapping("/")
 public class DirectorLoginController {
 	@Autowired
-    UsuariosService SUsuario;
+    IUsuariosService SUsuario;
 	
 	@GetMapping("autentificar")
 	public ModelAndView autentificarUsers() {

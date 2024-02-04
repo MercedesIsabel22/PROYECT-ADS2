@@ -6,17 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.cibertec.proyecto.entity.CapsulaProveedor;
-import edu.cibertec.proyecto.repositories.ProveedoresRepository;
-import edu.cibertec.proyecto.services.ProveedoresService;
+import edu.cibertec.proyecto.repositories.IProveedoresRepository;
+import edu.cibertec.proyecto.services.IProveedoresService;
 
 @Service
-public class ProveedoresServiceImpl implements ProveedoresService {
+public class ProveedoresServiceImpl implements IProveedoresService {
     @Autowired
-    ProveedoresRepository rp;
+    IProveedoresRepository rp;
 
     @Override
     public List<CapsulaProveedor> listar() {
-
         return rp.findByEstado(1);
     }
 

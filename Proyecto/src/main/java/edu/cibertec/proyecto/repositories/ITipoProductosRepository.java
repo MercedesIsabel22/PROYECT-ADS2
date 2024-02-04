@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import edu.cibertec.proyecto.entity.CapsulaTipoProducto;
 
 @Repository
-public interface TipoProductosRepository extends JpaRepository<CapsulaTipoProducto, Long> {
+public interface ITipoProductosRepository extends JpaRepository<CapsulaTipoProducto, Long> {
 
 }

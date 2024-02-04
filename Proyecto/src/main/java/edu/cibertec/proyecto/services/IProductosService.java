@@ -7,7 +7,7 @@ import edu.cibertec.proyecto.entity.CapsulaProducto;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperPrint;
 
-public interface ProductosService {
+public interface IProductosService {
 
 	public List<CapsulaProducto> listar();
 	public CapsulaProducto buscarProducto(Long codigo);

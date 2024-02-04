@@ -1,16 +1,23 @@
 package edu.cibertec.proyecto.entity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Builder
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 @Entity
 @Table(name="tb_ventas")
-public class CapsulaVenta {
+public class CapsulaVenta implements Serializable {
+	@Serial
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String ventas;

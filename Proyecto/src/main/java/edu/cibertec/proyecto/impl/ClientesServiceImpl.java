@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.cibertec.proyecto.entity.CapsulaCliente;
-import edu.cibertec.proyecto.repositories.ClientesRepository;
-import edu.cibertec.proyecto.services.ClientesService;
+import edu.cibertec.proyecto.repositories.IClientesRepository;
+import edu.cibertec.proyecto.services.IClientesService;
 @Service
-public class ClientesServiceImpl implements ClientesService {
+public class ClientesServiceImpl implements IClientesService {
 	@Autowired
-	ClientesRepository rc;
+	IClientesRepository rc;
 	
 	@Override
 	public List<CapsulaCliente> listar() {
