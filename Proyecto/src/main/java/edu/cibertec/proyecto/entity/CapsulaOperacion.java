@@ -2,6 +2,7 @@ package edu.cibertec.proyecto.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -34,6 +35,6 @@ public class CapsulaOperacion implements Serializable {
 	private CapsulaProducto producto;
 	private int cantidad;
 	private Double preciocpa;
-	private Date fechacpa;
+	private LocalDate fechacpa;
 	private int estado;
 }

@@ -24,7 +24,7 @@
 					<strong>Bienvenido al Portal SOFIA</strong>
 				</p>
 
-				<form th:action="@{/ejecutar_autentificacion}" th:object="${pqteusers}" method="post">
+				<form th:action="@{/auth}" th:object="${pqteusers}" method="post">
 					<div>
 						<label for="exampleInputEmail1">Usuario</label> 
 						<input type="text" class="form-control" placeholder="Usuario" th:field="*{usuario}" />

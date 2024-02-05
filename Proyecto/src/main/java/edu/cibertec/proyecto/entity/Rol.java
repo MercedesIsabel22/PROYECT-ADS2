@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
@@ -12,21 +13,16 @@ import java.io.Serializable;
 @Setter
 @Getter
 @Entity
-@Table(name = "tb_usuarios")
-public class CapsulaUsuario implements Serializable {
+@Table(name = "tb_roles")
+public class Rol implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idusuario;
-    private String nombre;
-    private String usuario;
-    private String clave;
-    private int estado;
-    @Transient
-    private String token;
-    @ManyToOne
-    @JoinColumn(name = "rolId")
-    private Rol rol;
+    @Column(unique = true, nullable = false)
+    private Long id;
+    private String name;
+    @OneToMany(mappedBy = "rol")
+    private List<Menu> menu;
 }

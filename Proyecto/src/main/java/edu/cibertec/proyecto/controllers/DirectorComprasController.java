@@ -1,22 +1,7 @@
 package edu.cibertec.proyecto.controllers;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-
-import edu.cibertec.proyecto.entity.CapsulaProducto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-
 import edu.cibertec.proyecto.entity.CapsulaOperacion;
+import edu.cibertec.proyecto.entity.CapsulaProducto;
 import edu.cibertec.proyecto.entity.PastillaProducto;
 import edu.cibertec.proyecto.services.INumbersService;
 import edu.cibertec.proyecto.services.IOperacionesService;
@@ -26,6 +11,16 @@ import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
@@ -60,7 +55,7 @@ public class DirectorComprasController {
 
     @PostMapping("reponerproducto/actualizar")
     public String reponerProducto(@ModelAttribute(name = "producto") CapsulaProducto obj) {
-        Date date = new Date(System.currentTimeMillis());
+        LocalDate date = LocalDate.now();
         CapsulaOperacion opr = CapsulaOperacion.builder()
                 .proceso("REPO")
                 .tipo(1)
@@ -104,7 +99,7 @@ public class DirectorComprasController {
 
     @PostMapping("comprasProductos/guardar")
     public String guardarProducto() {
-        Date date = new Date(System.currentTimeMillis());
+        LocalDate date = LocalDate.now();
         List<CapsulaOperacion> paquete = new ArrayList<CapsulaOperacion>();
         CapsulaOperacion ope;
         for (PastillaProducto cap : pastilla) {
